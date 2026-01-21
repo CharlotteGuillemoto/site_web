@@ -1,5 +1,9 @@
 import sqlite3
 from datetime import datetime
+import pandas as pd
+import numpy as np 
+
+
 class DatabaseManager:
 
     def __init__(self,fichierdb):
@@ -38,3 +42,4 @@ class DatabaseManager:
 
     def close(self):
         self.conn.close()
+
