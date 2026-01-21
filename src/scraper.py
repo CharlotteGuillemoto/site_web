@@ -15,6 +15,15 @@ type(html)
 soup = BeautifulSoup(html, "html.parser")
 type(soup)
 
+
+nom= soup.find_all('a',class_='ent-name')
+for n in nom:
+    type= n.find('td',class_='cell-icon')
+    total=n.find('td',class_='cell-num cell-total')
+    print(n,type,total)
+
+
+
 tableau = soup.find("table", id="pokedex") #on va chercher que le tableau, pour éviter d'avoir trop d'infos 
 #print(tableau)
 
