@@ -16,28 +16,12 @@ soup = BeautifulSoup(html, "html.parser")
 type(soup)
 
 
-'''nom= soup.find_all('a',class_='ent-name')
-for n in nom:
-    type= n.find('td',class_='cell-icon') #pour faire ressortir les type et le total de points pour chaque pokemon
-    total=n.find('td',class_='cell-num cell-total')
-    print(n,type,total)'''
-
 
 
 tableau = soup.find("table", id="pokedex") #on va chercher que le tableau, pour éviter d'avoir trop d'infos 
 #print(tableau)
 
-'''noms = soup.find_all("a", class_="ent-name") #ça va chercher que les cases avec le nom des pokémons
-type=soup.find_all('td',class_='cell-icon')
-total=soup.find_all('td',class_='cell-num cell-total')
 
-for e in noms : 
-    print(e.prettify()) #prettify, ça réarrange pour faire plus beau, à ne pas utiliser sur noms directement parce que c'est une liste 
-for e in type : 
-    print(e.prettify())
-for e in total : 
-    print(e.prettify())
-#print(html) (trop moche)'''
 
 from database import DatabaseManager
 db = DatabaseManager("database.db")

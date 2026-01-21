@@ -6,7 +6,7 @@ class DatabaseManager:
         self.fichierdb = fichierdb
         self.conn = sqlite3.connect(self.fichierdb)
         self.cursor = self.conn.cursor()
-        self.cursor.execute(""".
+        self.cursor.execute("""
             CREATE TABLE IF NOT EXISTS pokedex (
                 nom TEXT NOT NULL,
                 type TEXT,
